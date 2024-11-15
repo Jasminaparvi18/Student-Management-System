@@ -1,0 +1,32 @@
+from django.urls import path
+from app import views
+urlpatterns = [
+    path('',views.home,name='home'),
+    path('studregister',views.studregister,name='studregister'),
+    path('log',views.logins,name='logins'),
+    path('logouts',views.logouts,name='logouts'),
+    path('adminhome',views.adminhome,name='adminhome'),
+    path('studenthome',views.studenthome,name='studenthome'),
+    path('teacherhome',views.teacherhome,name='teacherhome'),
+    path('addteacher',views.addteacher,name='addteacher'),
+    path('viewteacher',views.adminviewteacher,name='adminviewteacher'),
+    path('viewstudent',views.adminviewstudent,name='adminviewstudent'),
+    path('approve',views.approve,name='approve'),
+    path('approved/<int:id>',views.approved,name='approved'),
+    path('reject/<int:id>',views.reject,name='reject'),
+    path('admindeleteteacher/<int:id>',views.admindeleteteacher,name='admindeleteteacher'),
+    path('admineditteacher/<int:id>',views.admineditteacher,name='admineditteacher'),
+    path('admineditteacher2/<int:id>',views.admineditteacher2,name='admineditteacher2'),
+    path('admindeletestudent/<int:id>',views.admindeletestudent,name='admindeletestudent'),
+    path('admineditstudent/<int:id>',views.admineditstudent,name='admineditstudent'),
+    path('admineditstudent2/<int:id>',views.admineditstudent2,name='admineditstudent2'),
+    path('teachereditprofile',views.teachereditprofile,name='teachereditprofile'),
+    path('teachereditprofile2/<int:id>',views.teachereditprofile2,name='teachereditprofile2'),
+    path('teacherviewstudent',views.teacherviewstudent,name='teacherviewstudent'),
+    path('studenteditprofile',views.studenteditprofile,name='studenteditprofile'),
+    path('studenteditprofile2/<int:id>',views.studenteditprofile2,name='studenteditprofile2'),
+    path('studentviewteacher',views.studentviewteacher,name='studentviewteacher'),
+    path('deleteall',views.deleteall,name='deleteall'),
+    # path('waiting',views.waiting,name='waiting'),
+
+]
